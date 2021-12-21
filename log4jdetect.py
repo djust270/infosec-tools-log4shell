@@ -28,11 +28,6 @@ def iter_jarfile(fobj, parents=None, stats=None):
     except:
         print(exception)
 
-def set_default(obj):
-    if isinstance(obj, set):
-        return list(obj)
-    raise TypeError                
-
 for f in jarfiles:
     iter_jarfile(f)
 
