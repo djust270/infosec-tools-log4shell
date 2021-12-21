@@ -1,3 +1,4 @@
+# Checks all jar files for Jndilookup.class. Lists out any files containing this class. 
 from logging import exception
 import os
 import fnmatch
