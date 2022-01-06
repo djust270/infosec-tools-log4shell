@@ -4,7 +4,8 @@ Detect and remediate JNDI.Lookup files from any JAR files on the system
 
 $7z = "https://www.7-zip.org/a/7za920.zip"
 Invoke-WebRequest -Uri $7z -OutFile "$env:TEMP\7z.zip"
-expand-archive $env:temp\7z.zip $env:temp
+mkdir "$env:TEMP\7z"
+expand-archive "$env:temp\7z.zip" "$env:temp\7z"
 $drives = Get-PSDrive -PSProvider FileSystem
 $log4jfilescan = @()
 foreach ($drive in $drives)
